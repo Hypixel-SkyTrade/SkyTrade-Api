@@ -2,14 +2,16 @@
 const { Router } = require('express')
 
 //API
+const addDiscordTrade = require('./API/addDiscordTrade')
 const setDiscordChannel = require('./API/setDiscordChannel')
-const checkDiscordChannelSet = require('./API/checkDiscordChannelSet')
+const checkDiscordChannel = require('./API/checkDiscordChannel')
 
 
 const router = Router()
 
-router.use('/api/setDiscordChannel', setDiscordChannel)
-router.use('/api/checkDiscordChannelSet', checkDiscordChannelSet)
+router.use('/api/addDiscordTrade', addDiscordTrade)
+router.use('/api/checkDiscordChannelSet', setDiscordChannel)
+router.use('/api/checkDiscordChannel', checkDiscordChannel)
 
 
 router.get('*', (req, res) => {

@@ -1,0 +1,4 @@
+exports.getAddDiscordTrade = (req, res) => {
+
+}
+
